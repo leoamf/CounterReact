@@ -6,15 +6,26 @@ class Counter extends React.Component {
         this.state = {
             counter : props.inicio
         }
+
+        this.handleDecrement = this.handleDecrement.bind(this);
+        this.handleIncrement = this.handleIncrement.bind(this);
+        
     }
+    handleDecrement() {
+        this.setState({ counter: --this.state.counter })
+    }
+    handleIncrement(){
+        this.setState({ counter: ++this.state.counter })
+    }
+
     render(){
         const textStyleColor = {
             color: this.props.color
         }
         return( 
             <div>
-                <button onClick={() => this.setState({counter:--this.state.counter })}> - </button>
-                <button onClick={() => this.setState({ counter: ++this.state.counter })}> + </button>
+                <button onClick={this.handleDecrement}> - </button>
+                <button onClick={this.handleIncrement}> + </button>
                 <h1 style={textStyleColor}>
                     A Conta está em: {this.state.counter}
                 </h1> 
