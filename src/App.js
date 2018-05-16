@@ -6,7 +6,11 @@ import Counter from "./Counter"
 class App extends Component {
     render() {
         return ( 
-            <Counter inicio ={10} color ="red" />
+            <div>
+                <Counter inicio ={10} color ="red" />
+                <Counter inicio={30} color="gren" />
+                <Counter inicio={2345} color="purple" />
+            </div>
         );
     }
 }
