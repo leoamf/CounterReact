@@ -1,0 +1,8 @@
+React
+
+ pre requisitos:
+	Instalar nodes.js;
+
+ 1- npm install -g create-react-app
+ 2- create-react-app <nome_projeto>
+ 3- entrar no projeto e npm star
